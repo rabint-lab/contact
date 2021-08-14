@@ -58,7 +58,7 @@ $showFiels = [
 
                                 <span class="value "
                                       style="text-align: left ;direction: ltr; display: inline-block">
-                                    <?= $item['lankable'] ? '<a href="' . $item['title'] . '">' : ''; ?>
+                                    <?= $item['lankable'] ? '<a href="' . $opts[$key] . '">' : ''; ?>
                                     <?= $opts[$key]; ?>
                                     <?= $item['lankable'] ? '</a>' : ''; ?>
                                 </span>
@@ -72,7 +72,24 @@ $showFiels = [
                     <div class="spacer"></div>
                     <div class="center-map">
                         <?php
-                        echo rabint\widgets\map\MapWidget::widget(['center' => $opts['location'] ?: '36.305857, 59.614906', 'style' => 'width: 100%;height: 400px;	float: right;'])
+
+                        $location = $opts['location'] ?: '36.305857, 59.614906';
+
+                        if (!empty($opts['location_link'])) {
+                            $notePop = '<div class="mapPopUp center">';
+
+                            $text = $opts['location_text'] ?: "باز کردن روی نقشه";
+                            $notePop .= '<a  class="text-center" target="_blank" href="' . $opts['location_link'] . '">' . $text . '</a>';
+                            $notePop .= '</div>';
+                        }
+
+                        $markers = [[
+                            'location' => $location,
+                            'bindPopup' => $notePop ?? '',
+                        ]
+                        ];
+
+                        echo rabint\widgets\map\MapWidget::widget(['center' => $location, 'markers' => $markers, 'style' => 'width: 100%;height: 400px;	float: right;'])
                         ?>
                     </div>
                     <div class="center">
@@ -105,8 +122,8 @@ $showFiels = [
                 </div>
                 <div class="clearfix spacer"></div>
                 <div class="contact-form">
-                        <?php $form = ActiveForm::begin(); ?>
-                <div class="clearfix spacer"></div>
+                    <?php $form = ActiveForm::begin(); ?>
+                    <div class="clearfix spacer"></div>
                     <div class="row">
                         <div class="col-sm-12">
                             <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
