@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
 $showFiels = [
     'address' => ['title' => Yii::t('rabint', 'آدرس'), 'icon' => 'fas fa-map-marker-alt', 'lankable' => false],
     'email' => ['title' => Yii::t('rabint', 'ایمیل'), 'icon' => 'fas fa-envelope', 'lankable' => false],
-    'tel' => ['title' => Yii::t('rabint', 'تلفن'), 'icon' => 'fas fa-phone-square', 'lankable' => false],
+    'contact_tel' => ['title' => Yii::t('rabint', 'تلفن'), 'icon' => 'fas fa-phone-square', 'lankable' => false],
     'fax' => ['title' => Yii::t('rabint', 'فکس'), 'icon' => 'fas fa-fax', 'lankable' => false],
     'telegram' => ['title' => Yii::t('app', 'تلگرام'), 'icon' => 'fab fa-telegram-plane', 'lankable' => true],
     'instagram' => ['title' => Yii::t('app', 'اینستاگرام'), 'icon' => 'fab fa-instagram', 'lankable' => true],
