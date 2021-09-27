@@ -24,6 +24,7 @@ $showFiels = [
     'fax' => ['title' => Yii::t('rabint', 'فکس'), 'icon' => 'fas fa-fax', 'lankable' => false],
     'telegram' => ['title' => Yii::t('app', 'تلگرام'), 'icon' => 'fab fa-telegram-plane', 'lankable' => true],
     'instagram' => ['title' => Yii::t('app', 'اینستاگرام'), 'icon' => 'fab fa-instagram', 'lankable' => true],
+    'whatsapp' => ['title' => Yii::t('app', 'واتساپ'), 'icon' => 'fab fa-whatsapp', 'lankable' => true],
     'youtube' => ['title' => Yii::t('app', 'یوتیوب'), 'icon' => 'fab fa-youtube', 'lankable' => true],
     'twitter' => ['title' => Yii::t('app', 'تویتر'), 'icon' => 'fab fa-twitter', 'lankable' => true],
     'facebook' => ['title' => Yii::t('app', 'فیسبوک'), 'icon' => 'fab fa-facebook', 'lankable' => true],
