@@ -22,6 +22,13 @@ $showFiels = [
     'email' => ['title' => Yii::t('rabint', 'ایمیل'), 'icon' => 'fas fa-envelope', 'lankable' => false],
     'contact_tel' => ['title' => Yii::t('rabint', 'تلفن'), 'icon' => 'fas fa-phone-square', 'lankable' => false],
     'fax' => ['title' => Yii::t('rabint', 'فکس'), 'icon' => 'fas fa-fax', 'lankable' => false],
+
+    'eitaa' => ['title' => Yii::t('app', 'ایتا'), 'icon' => 'fab fa-facebook-messenger', 'lankable' => true],
+    'bale' => ['title' => Yii::t('app', 'بله'), 'icon' => 'fas fa-circle-check', 'lankable' => true],
+    'aparat' => ['title' => Yii::t('app', 'آپارات'), 'icon' => 'fas fa-film', 'lankable' => true],
+    'gap' => ['title' => Yii::t('app', 'گپ'), 'icon' => 'fas fa-comment-dots', 'lankable' => true],
+    'soroush' => ['title' => Yii::t('app', 'سروش'), 'icon' => 'fab fa-speakap', 'lankable' => true],
+
     'telegram' => ['title' => Yii::t('app', 'تلگرام'), 'icon' => 'fab fa-telegram-plane', 'lankable' => true],
     'instagram' => ['title' => Yii::t('app', 'اینستاگرام'), 'icon' => 'fab fa-instagram', 'lankable' => true],
     'whatsapp' => ['title' => Yii::t('app', 'واتساپ'), 'icon' => 'fab fa-whatsapp', 'lankable' => true],
@@ -31,9 +38,6 @@ $showFiels = [
     'linkedin' => ['title' => Yii::t('app', 'لینکدین'), 'icon' => 'fab fa-linkedin', 'lankable' => true],
     'pinterest' => ['title' => Yii::t('app', 'پینترست'), 'icon' => 'fab fa-pinterest-p', 'lankable' => true],
     'vimeo' => ['title' => Yii::t('app', 'ویمو'), 'icon' => 'fab fa-vimeo', 'lankable' => true],
-    'aparat' => ['title' => Yii::t('app', 'آپارات'), 'icon' => 'fas fa-film', 'lankable' => true],
-    'gap' => ['title' => Yii::t('app', 'گپ'), 'icon' => 'fas fa-comment-dots', 'lankable' => true],
-    'soroush' => ['title' => Yii::t('app', 'سروش'), 'icon' => 'fab fa-speakap', 'lankable' => true],
 ];
 ?>
     <div class="contact-create">
