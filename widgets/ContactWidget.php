@@ -13,7 +13,7 @@ namespace rabint\contact\widgets;
  *
  * @author mojtaba
  */
-class ContactWidget extends \yii\bootstrap\Widget {
+class ContactWidget extends \yii\bootstrap4\Widget {
 
     var $style = 'default';
 
