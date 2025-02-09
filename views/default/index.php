@@ -39,6 +39,19 @@ $showFiels = [
     'pinterest' => ['title' => Yii::t('app', 'پینترست'), 'icon' => 'fab fa-pinterest-p', 'lankable' => true],
     'vimeo' => ['title' => Yii::t('app', 'ویمو'), 'icon' => 'fab fa-vimeo', 'lankable' => true],
 ];
+
+if (!empty(Yii::$app->request->get('name')) or !empty(Yii::$app->request->get('email'))) {
+    $model->name = Yii::$app->request->get('name');
+    $model->email = Yii::$app->request->get('email');
+    $model->cellphone = Yii::$app->request->get('cellphone');
+    $model->subject = Yii::$app->request->get('subject');
+    $model->text = Yii::$app->request->get('text');
+    ?>
+    <div class="alert alert-warning" role="alert">
+        لطفا کد امنیتی را (در انتهای فرم تماس) تکمیل نمایید
+    </div>
+    <?php
+}
 ?>
     <div class="contact-create">
         <div class="row">
@@ -53,7 +66,7 @@ $showFiels = [
                     <ul class="contact-fields" style="list-style: none; padding: 0">
                         <?php
                         foreach ($showFiels as $key => $item) {
-                            if (!isset($opts[$key]) OR empty($opts[$key])) {
+                            if (!isset($opts[$key]) or empty($opts[$key])) {
                                 continue;
                             }
                             ?>
